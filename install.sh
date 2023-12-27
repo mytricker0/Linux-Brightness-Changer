@@ -11,7 +11,7 @@ SCRIPT_URL="https://raw.githubusercontent.com/mytricker0/Linux-Brightness-Change
 
 # Check for root privileges
 if [ "$(id -u)" -ne 0 ]; then
-    echo -e "${RED}Please run this script with sudo:${NC} sudo $0 $*"
+    echo -e "${RED}Please run this script with sudo:${NC}"
     exit 1
 fi
 

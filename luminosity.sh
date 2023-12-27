@@ -1,8 +1,5 @@
 #!/bin/bash
 
-
-#!/bin/bash
-
 RED='\033[0;31m'
 MAGENTA='\033[0;35m'
 YELLOW='\033[1;33m'
@@ -32,7 +29,7 @@ if [ "$1" = "remove" ]; then
     # Remove the script from /usr/bin
     if [ -f "${INSTALL_DIR}/${SCRIPT_NAME}" ]; then
         rm -f "${INSTALL_DIR}/${SCRIPT_NAME}"
-        echo -e "${MAGENTA}The script ${SCRIPT_NAME} has been successfully removed from ${INSTALL_DIR}.${NC}"
+        echo -e "${MAGENTA}The script ${SCRIPT_NAME} has been successfully removed ${NC}"
     else
         echo -e "${YELLOW}The script ${SCRIPT_NAME} was not found in ${INSTALL_DIR}.${NC}"
     fi
