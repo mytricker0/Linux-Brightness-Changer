@@ -10,8 +10,8 @@ SCRIPT_NAME="lum"
 SCRIPT_URL="https://raw.githubusercontent.com/mytricker0/Linux-Brightness-Changer/main/luminosity.sh"
 
 # Check for root privileges
-if [ "$EUID" -ne 0 ]; then
-    echo -e "${RED}Permission denied, run with sudo:${NC} sudo $0 $*"
+if [ "$(id -u)" -ne 0 ]; then
+    echo -e "${RED}Please run this script with sudo:${NC} sudo $0 $*"
     exit 1
 fi
 
