@@ -14,7 +14,7 @@ Simple to use command line tool to change the brightness/luminosity of your linu
 easy one liner install
 
 ```bash
-  curl https://raw.githubusercontent.com/mytricker0/Linux-Brightness-Changer/main/install.sh | sudo sh
+  sudo bash -c "curl https://raw.githubusercontent.com/mytricker0/Linux-Brightness-Changer/main/install.sh | sh"
 ```
 
 #### What it does with sudo :

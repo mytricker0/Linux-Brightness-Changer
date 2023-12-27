@@ -11,7 +11,7 @@ SCRIPT_URL="https://raw.githubusercontent.com/mytricker0/Linux-Brightness-Change
 
 # Check for root privileges
 if [ "$(id -u)" -ne 0 ]; then
-    echo -e "${RED}Please run this script with sudo:${NC}"
+    printf "${RED}Please run this script with sudo${NC}\n"
     exit 1
 fi
 
@@ -22,11 +22,11 @@ if [ -f "$SCRIPT_NAME" ]; then
     mv "$SCRIPT_NAME" "$INSTALL_DIR"
 
     if [ -f "$INSTALL_DIR/$SCRIPT_NAME" ]; then
-        echo -e "${MAGENTA}Installation completed. You can run the script using 'lum' command.${NC}"
+        printf "${MAGENTA}Installation completed. You can run the script using 'lum' command.${NC}\n"
     else
-        echo -e "${RED}Installation failed: Unable to move the script to $INSTALL_DIR.${NC}"
+        printf "${RED}Installation failed: Unable to move the script to $INSTALL_DIR.${NC}\n"
         rm -f "$SCRIPT_NAME"
     fi
 else
-    echo -e "${RED}Download failed: The script could not be downloaded from $SCRIPT_URL.${NC}"
+    printf "${RED}Download failed: The script could not be downloaded from $SCRIPT_URL.${NC}\n"
 fi
