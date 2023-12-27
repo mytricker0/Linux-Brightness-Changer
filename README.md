@@ -6,9 +6,7 @@ Simple to use command line tool to change the brightness/luminosity of your linu
 
 ## Usage/Examples
 
-
-
-
+![Alt Text](/demo.gif)
 ## Installation
 
 easy one liner install
