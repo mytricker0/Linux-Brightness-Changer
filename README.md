@@ -17,10 +17,13 @@ easy one liner installer
   sudo bash -c "curl https://raw.githubusercontent.com/mytricker0/Linux-Brightness-Changer/main/install.sh | sh"
 ```
 
+## Uninstall
+```bash
+sudo lum remove
+```
 ## Disclamer
 
 ##### be carefull when using `sudo`. always check the scripts
-
 
 
 ## Authors
