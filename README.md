@@ -17,7 +17,8 @@ easy one liner install
   sudo bash -c "curl https://raw.githubusercontent.com/mytricker0/Linux-Brightness-Changer/main/install.sh | sh"
 ```
 
-##Disclamer
+## Disclamer
+
 ##### be carefull when using `sudo`. always check the scripts
 
 
