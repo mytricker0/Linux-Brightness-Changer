@@ -21,8 +21,12 @@ if [ -f "$SCRIPT_NAME" ]; then
     if [ -f "$INSTALL_DIR/$SCRIPT_NAME" ]; then
         echo "${GREEN}Installation completed. You can run the script using 'lum.sh' command.${NC}}"
     else
-        echo "${RED}Installation failed: Unable to move the script to $INSTALL_DIR.${NC}"
+        echo "${RED}Installation failed: use sudo{NC}"
+        rm -fr "$SCRIPT_NAME"
     fi
+    rm -fr "./install.sh"
+    
+    
 else
     echo "${RED}Download failed: The script could not be downloaded from $SCRIPT_URL.${NC}"
 fi
