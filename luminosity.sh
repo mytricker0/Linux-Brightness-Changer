@@ -8,7 +8,7 @@ NC='\033[0m' # No Color
 
 
 revert_brightness() {
-    echo -e "\n${RED}Reverting to default brightness settings.${NC}"
+    echo -e "${RED}Operation cancelled. Reverting to default settings.${NC}"
     for screen in $screens; do
         xrandr --output $screen --brightness 1
     done
@@ -47,7 +47,6 @@ if (( $(echo "$1 < 0.1 || $1 > 1" | bc -l) )); then
         # Valid confirmation, do nothing
         ;;
     *)
-        echo -e "${RED}Operation cancelled. Reverting to default settings.${NC}"
         revert_brightness
         ;;
     esac
