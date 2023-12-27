@@ -1,11 +1,15 @@
 #!/bin/bash
 
 
+#!/bin/bash
+
 RED='\033[0;31m'
-GREEN='\033[0;35m'
+MAGENTA='\033[0;35m'
 YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
 
+INSTALL_DIR="/usr/bin"
+SCRIPT_NAME="lum"
 
 revert_brightness() {
     echo -e "${RED}Operation cancelled. Reverting to default settings.${NC}"
@@ -16,6 +20,24 @@ revert_brightness() {
 }
 
 trap revert_brightness SIGINT
+
+# Check for the 'remove' argument to uninstall the script
+if [ "$1" = "remove" ]; then
+    # Check for root privileges
+    if [ "$(id -u)" -ne 0 ]; then
+        echo -e "${RED}Please run this script with sudo to remove it: ${NC}sudo $0 $*"
+        exit 1
+    fi
+
+    # Remove the script from /usr/bin
+    if [ -f "${INSTALL_DIR}/${SCRIPT_NAME}" ]; then
+        rm -f "${INSTALL_DIR}/${SCRIPT_NAME}"
+        echo -e "${MAGENTA}The script ${SCRIPT_NAME} has been successfully removed from ${INSTALL_DIR}.${NC}"
+    else
+        echo -e "${YELLOW}The script ${SCRIPT_NAME} was not found in ${INSTALL_DIR}.${NC}"
+    fi
+    exit 0
+fi
 
 # Check if a brightness level is provided
 if [ -z "$1" ]; then
@@ -28,7 +50,6 @@ screens=$(xrandr -q | grep " connected" | awk '{print $1}')
 
 # Iterate over each screen and set the brightness
 for screen in $screens; do
-    # echo -e "${GREEN}Setting brightness of $screen to $1 ${NC}"
     xrandr --output $screen --brightness $1
 done
 
