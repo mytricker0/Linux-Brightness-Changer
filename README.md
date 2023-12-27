@@ -1,7 +1,7 @@
 
 # LINUX Brightness changer CLI
 
-Simple to use command line tool to change the brightness/luminosity of your linux machine 
+Simple to use command line tool to change the brightness/luminosity of your linux monitors 
 
 
 ## Usage/Examples
