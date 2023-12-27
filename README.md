@@ -1,5 +1,5 @@
 
-# <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" height="30" width="42" alt="linux logo"  /> Brightness changer CLI
+# Linux Brightness changer CLI <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" height="30" width="42" alt="linux logo"  />
 
 Simple to use command line tool to change the brightness/luminosity of your linux monitors 
 
