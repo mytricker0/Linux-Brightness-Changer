@@ -7,6 +7,8 @@ Simple to use command line tool to change the brightness/luminosity of your linu
 ## Usage/Examples
 
 ![Alt Text](demo.gif)
+
+You can use the `lum` from anywhere in your terminal 
 ## Installation
 
 easy one liner install
@@ -15,12 +17,11 @@ easy one liner install
   sudo bash -c "curl https://raw.githubusercontent.com/mytricker0/Linux-Brightness-Changer/main/install.sh | sh"
 ```
 
-#### What it does with sudo :
+##Disclamer
+##### be carefull when using `sudo`. always check the scripts
 
-```bash
-mv lum.sh /usr/bin/lum
-```
-so that you can use the `lum` from anywhere in your terminal 
+
+
 ## Authors
 
 - [@mytricker0](https://www.github.com/mytricker0)
